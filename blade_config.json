@@ -1,0 +1,200 @@
+{
+  "name": "Laravel Blade Template Updater Configuration",
+  "version": "1.0.0",
+  "description": "Configuration file for automatic Blade template migration scripts",
+  "projectPath": "c:\\xampp\\htdocs\\studentManagement",
+  "viewsPath": "resources/views",
+  "backupPath": "resources/views.backup",
+  "dryRun": false,
+  "encoding": "UTF-8",
+  
+  "templateSettings": {
+    "extends": "layout",
+    "oldExtends": "layout.header",
+    "titleSection": "title",
+    "contentSection": "content",
+    "containerClass": "container mt-4",
+    "pageHeaderClass": "page-header mb-4",
+    "pageContentClass": "page-content"
+  },
+
+  "pageStructure": {
+    "includePageHeader": true,
+    "headerHasHr": true,
+    "headerHasBreadcrumb": false,
+    "wrapInContainer": true,
+    "containerFluid": false
+  },
+
+  "buttons": {
+    "enableAutoClass": true,
+    "defaultClass": "btn",
+    "submitButtonClass": "btn btn-primary",
+    "cancelButtonClass": "btn btn-secondary",
+    "deleteButtonClass": "btn btn-danger",
+    "editButtonClass": "btn btn-warning"
+  },
+
+  "icons": {
+    "enableIconReplacement": true,
+    "from": "bootstrap",
+    "to": "fontawesome",
+    "mapping": {
+      "bi bi-pencil": "fas fa-edit",
+      "bi bi-pencil-square": "fas fa-edit",
+      "bi bi-trash": "fas fa-trash-alt",
+      "bi bi-trash-fill": "fas fa-trash-alt",
+      "bi bi-plus": "fas fa-plus",
+      "bi bi-plus-circle": "fas fa-plus-circle",
+      "bi bi-eye": "fas fa-eye",
+      "bi bi-eye-fill": "fas fa-eye",
+      "bi bi-eye-slash": "fas fa-eye-slash",
+      "bi bi-check": "fas fa-check",
+      "bi bi-check-circle": "fas fa-check-circle",
+      "bi bi-check-all": "fas fa-check",
+      "bi bi-x": "fas fa-times",
+      "bi bi-x-circle": "fas fa-times-circle",
+      "bi bi-download": "fas fa-download",
+      "bi bi-printer": "fas fa-print",
+      "bi bi-printer-fill": "fas fa-print",
+      "bi bi-arrow-left": "fas fa-arrow-left",
+      "bi bi-arrow-right": "fas fa-arrow-right",
+      "bi bi-search": "fas fa-search",
+      "bi bi-filter": "fas fa-filter",
+      "bi bi-filter-circle": "fas fa-filter",
+      "bi bi-list": "fas fa-list",
+      "bi bi-list-ul": "fas fa-list-ul",
+      "bi bi-list-ol": "fas fa-list-ol",
+      "bi bi-grid": "fas fa-th",
+      "bi bi-grid-3x2": "fas fa-th",
+      "bi bi-table": "fas fa-table",
+      "bi bi-gear": "fas fa-cog",
+      "bi bi-gear-fill": "fas fa-cog",
+      "bi bi-house": "fas fa-home",
+      "bi bi-house-fill": "fas fa-home",
+      "bi bi-question-circle": "fas fa-question-circle",
+      "bi bi-info-circle": "fas fa-info-circle",
+      "bi bi-exclamation-triangle": "fas fa-exclamation-triangle",
+      "bi bi-exclamation-circle": "fas fa-exclamation-circle",
+      "bi bi-save": "fas fa-save",
+      "bi bi-file-earmark": "fas fa-file",
+      "bi bi-folder": "fas fa-folder",
+      "bi bi-upload": "fas fa-upload",
+      "bi bi-download": "fas fa-download",
+      "bi bi-share": "fas fa-share",
+      "bi bi-link": "fas fa-link",
+      "bi bi-bell": "fas fa-bell",
+      "bi bi-envelope": "fas fa-envelope",
+      "bi bi-chat": "fas fa-comment",
+      "bi bi-calendar": "fas fa-calendar",
+      "bi bi-clock": "fas fa-clock",
+      "bi bi-user": "fas fa-user",
+      "bi bi-users": "fas fa-users",
+      "bi bi-person": "fas fa-user",
+      "bi bi-person-plus": "fas fa-user-plus",
+      "bi bi-unlock": "fas fa-unlock",
+      "bi bi-lock": "fas fa-lock",
+      "bi bi-shield": "fas fa-shield-alt"
+    }
+  },
+
+  "sections": {
+    "preserveSections": [
+      "head",
+      "scripts",
+      "styles",
+      "footer"
+    ],
+    "removeSections": [
+      "layout.header",
+      "header"
+    ]
+  },
+
+  "logging": {
+    "enabled": true,
+    "level": "info",
+    "logFile": "blade_update.log",
+    "logFormat": "[{timestamp}] {level}: {message}",
+    "includeTimestamp": true
+  },
+
+  "validation": {
+    "checkFileEncoding": true,
+    "requireUTF8": true,
+    "validateBladeExpression": true,
+    "strictMode": false
+  },
+
+  "backup": {
+    "enabled": true,
+    "backupBeforeUpdate": true,
+    "keepBackupDays": 7,
+    "compressionFormat": "zip"
+  },
+
+  "extensions": {
+    "fontAwesomeVersion": "6.0.0",
+    "fontAwesomeCDN": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css",
+    "bootstrapVersion": "5.1.3",
+    "bootstrapCDN": "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+  },
+
+  "filePatterns": {
+    "blade": "*.blade.php",
+    "excludeDirectories": [
+      "vendor",
+      "node_modules",
+      ".git",
+      "storage"
+    ],
+    "includeHidden": false
+  },
+
+  "performance": {
+    "enableParallelProcessing": false,
+    "maxConcurrentFiles": 5,
+    "batchSize": 10,
+    "timeout": 30000
+  },
+
+  "notifications": {
+    "showProgress": true,
+    "showSummary": true,
+    "colorize": true,
+    "verboseMode": false
+  },
+
+  "filters": {
+    "minFileSizeBytes": 0,
+    "maxFileSizeBytes": 5242880,
+    "fileNamePatterns": [
+      "*"
+    ],
+    "excludeFileNamePatterns": [
+      "*.bak",
+      "*.tmp"
+    ]
+  },
+
+  "custom": {
+    "customLayout": {
+      "headerHTML": "<div class=\"page-header mb-4\">\n    <h1 class=\"page-title\">@yield('title')</h1>\n    <hr>\n</div>",
+      "footerHTML": "",
+      "navbarHTML": ""
+    },
+    "customCSS": [
+      "resources/css/custom.css"
+    ],
+    "customJS": [
+      "resources/js/custom.js"
+    ]
+  },
+
+  "rollback": {
+    "enabled": true,
+    "saveChangesList": true,
+    "allowRollback": true,
+    "rollbackFile": "blade_updates.json"
+  }
+}

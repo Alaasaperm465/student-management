@@ -27,7 +27,7 @@ class TeacherController extends Controller
 
         Teacher::create($request->only(['name', 'email', 'subject']));
 
-        return redirect()->route('teachers.index')->with('success', 'Teacher created successfully.');
+        return redirect()->route('admin.teachers.index')->with('success', 'Teacher created successfully.');
     }
     public function show(Teacher $teacher)
     {
@@ -46,11 +46,11 @@ class TeacherController extends Controller
         ]);
 
         $teacher->update($request->only(['name', 'email', 'subject']));
-        return redirect()->route('teachers.index')->with('success', 'Teacher updated successfully.');
+        return redirect()->route('admin.teachers.index')->with('success', 'Teacher updated successfully.');
     }
     public function destroy(string $id)
     {
         Teacher::destroy($id);
-        return redirect()->route('teachers.index')->with('success', 'Teacher deleted successfully.');
+        return redirect()->route('admin.teachers.index')->with('success', 'Teacher deleted successfully.');
     }
 }
